@@ -22,7 +22,8 @@ module.exports = env => {
             host: "localhost",
             historyApiFallback: true,
             open: false,
-            hot: true
+            hot: true,
+            port: 3000
         },
         module: {
             rules: [
