@@ -33,7 +33,7 @@ public class EventController {
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
-        void saveEvent(@RequestBody EventRequest request) {
+        void createEvent(@RequestBody EventRequest request) {
             eventService.createEvent(request);
     }
 }
