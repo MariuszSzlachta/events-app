@@ -1,17 +1,18 @@
 package com.mszlachta.eventsapp.event.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity
 public class Event {
 
@@ -36,10 +37,14 @@ public class Event {
 
     private int localNumber;
 
-//    @NotNull
-//    private LocalDate dateStart;
-//
-//    @NotNull
-//    private LocalDate dateTo;
-
+    public final EventDto toDto() {
+        return EventDto.builder()
+            .name(getName())
+            .description(getDescription())
+            .city(getCity())
+            .street(getStreet())
+            .buildingNumber(getBuildingNumber())
+            .localNumber(getLocalNumber())
+            .build();
+    }
 }

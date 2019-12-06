@@ -1,6 +1,8 @@
 package com.mszlachta.eventsapp.event.controller;
 
-import com.mszlachta.eventsapp.event.model.Event;
+import com.mszlachta.eventsapp.event.model.EventDto;
+import com.mszlachta.eventsapp.event.controller.request.EventRequest;
+import com.mszlachta.eventsapp.event.model.EventParameters;
 import com.mszlachta.eventsapp.event.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,18 +22,18 @@ public class EventController {
     }
 
     @GetMapping("/events")
-    List<Event> findAll() {
+    List<EventDto> findAll() {
         return eventService.findAll();
     }
 
     @GetMapping("/{eventName}")
-    Event getEventByName(@PathVariable final String eventName) {
+    EventDto getEventByName(@PathVariable final String eventName) {
         return eventService.getByName(eventName);
     }
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
-    Event newEvent(@RequestBody Event newEvent) {
-            return eventService.createEvent(newEvent);
+        void saveEvent(@RequestBody EventRequest request) {
+            eventService.createEvent(request);
     }
 }
