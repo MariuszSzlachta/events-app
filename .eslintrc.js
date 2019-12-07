@@ -4,7 +4,7 @@ module.exports = {
         es6: true
     },
 
-    extends: "airbnb/base",
+    extends: "airbnb",
 
     parserOptions: {
         ecmaFeatures: {
@@ -21,6 +21,10 @@ module.exports = {
     ],
 
     parser: "babel-eslint",
+
+    globals: {
+        require: false
+    },
 
     rules: {
         "arrow-parens": ["error", "as-needed"],
@@ -53,7 +57,8 @@ module.exports = {
         quotes: ["error", "double"],
         semi: ["error", "always"],
         "symbol-description": "off",
-
+        "react/jsx-uses-vars": 1,
+        "react/jsx-uses-react": 1,
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         "react/destructuring-assignment": ["off"],

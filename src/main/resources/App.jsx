@@ -1,10 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import { PATH } from "Common/Urls";
+import { Router } from "Pages";
+
 
 const App = () => (
-    <>
-        <div>Hello world!</div>
-    </>
+    <BrowserRouter>
+        <Route path={PATH.HOME}>
+            <div>Hello world!</div>
+            <Router />
+        </Route>
+    </BrowserRouter>
 );
 
-ReactDOM.render(<App/>, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app"));
