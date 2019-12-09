@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { PATH } from "Common/Urls";
 import { Router } from "Pages";
 
+import "./styles/index.scss";
 
 const App = () => (
     <BrowserRouter>

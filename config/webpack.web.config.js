@@ -45,7 +45,18 @@ module.exports = () => ({
                 use: [
                     "style-loader",
                     "css-loader",
-                    "sass-loader"
+                    "sass-loader",
+                    {
+                        loader: "sass-resources-loader",
+                        options: {
+                            resources: [
+                                `${APP_DIR}/styles/variables.scss`,
+                                `${APP_DIR}/styles/mixins.scss`,
+                                `${APP_DIR}/styles/animations.scss`
+
+                            ]
+                        }
+                    }
                 ]
             },
             {

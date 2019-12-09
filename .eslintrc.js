@@ -61,6 +61,7 @@ module.exports = {
         "react/jsx-uses-react": 1,
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
+        "react/jsx-props-no-spreading": "off",
         "react/destructuring-assignment": ["off"],
         "react/prop-types": ["error", {
             ignore: ["dispatch", "intl"],
