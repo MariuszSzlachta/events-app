@@ -4,6 +4,7 @@ import com.mszlachta.eventsapp.event.model.EventParameters;
 import lombok.Getter;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @Getter
 public class EventRequest implements EventParameters {
@@ -24,4 +25,10 @@ public class EventRequest implements EventParameters {
     private int buildingNumber;
 
     private int localNumber;
+
+    @NotNull
+    private LocalDateTime dateFrom;
+
+    @NotNull
+    private LocalDateTime dateTo;
 }

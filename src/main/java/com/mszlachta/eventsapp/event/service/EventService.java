@@ -7,7 +7,8 @@ import com.mszlachta.eventsapp.event.model.EventParameters;
 import java.util.List;
 
 public interface EventService {
-    EventDto getByName(final String eventName);
+
+    EventDto getById(final long eventId);
 
     List<EventDto> findAll();
 

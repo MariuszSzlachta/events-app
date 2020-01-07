@@ -1,0 +1,30 @@
+.event-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 180px;
+  padding: $mobile-padding;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+
+  &__arrow {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: $white;
+  }
+
+  &__heading {
+    position: relative;
+    right: -16px;
+    padding: 1rem 2rem;
+    @include font-h2;
+    color: $white;
+    background: rgba(#000, 0.7);
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+}

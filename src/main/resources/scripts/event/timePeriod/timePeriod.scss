@@ -1,0 +1,31 @@
+.time-period {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__separator,
+  &__icon,
+  &__label,
+  &__date {
+    margin-right: 8px;
+  }
+
+  &__separator {
+    color: $dark;
+  }
+
+  &__icon {
+    fill: $dark;
+  }
+
+  &__label {
+    @include font-caption;
+    color: $dark;
+    opacity: 0.8;
+  }
+
+  &__date {
+    @include font-caption;
+    color: $dark;
+  }
+}

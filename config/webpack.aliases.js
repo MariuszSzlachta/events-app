@@ -9,5 +9,8 @@ module.exports.aliases = {
     // Components
     Pages: path.resolve(__dirname, `${APP_DIR}/scripts/pages/index.js`),
     Images: path.resolve(__dirname, `${APP_DIR}/images`),
-    App: path.resolve(__dirname, APP_DIR)
+    App: path.resolve(__dirname, APP_DIR),
+
+    // Modules
+    Event: path.resolve(__dirname, `${APP_DIR}/scripts/event`)
 };

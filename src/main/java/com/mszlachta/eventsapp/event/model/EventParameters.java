@@ -1,5 +1,7 @@
 package com.mszlachta.eventsapp.event.model;
 
+import java.time.LocalDateTime;
+
 public interface EventParameters {
 
     String getName();
@@ -13,4 +15,8 @@ public interface EventParameters {
     int getBuildingNumber();
 
     int getLocalNumber();
+
+    LocalDateTime getDateFrom();
+
+    LocalDateTime getDateTo();
 }

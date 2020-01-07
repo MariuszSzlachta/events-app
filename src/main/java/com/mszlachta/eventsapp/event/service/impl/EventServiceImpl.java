@@ -22,8 +22,8 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public EventDto getByName(final String eventName) {
-        return eventRepository.findByName(eventName).toDto();
+    public EventDto getById(final long eventId) {
+        return eventRepository.findById(eventId).toDto();
     }
 
     @Override
@@ -44,6 +44,8 @@ public class EventServiceImpl implements EventService {
             .street(parameters.getStreet())
             .buildingNumber(parameters.getBuildingNumber())
             .localNumber(parameters.getLocalNumber())
+            .dateFrom(parameters.getDateFrom())
+            .dateTo(parameters.getDateTo())
             .build();
 
         return eventRepository.save(eventDto.toEntity());

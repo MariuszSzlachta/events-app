@@ -26,9 +26,9 @@ public class EventController {
         return eventService.findAll();
     }
 
-    @GetMapping("/{eventName}")
-    EventDto getEventByName(@PathVariable final String eventName) {
-        return eventService.getByName(eventName);
+    @GetMapping("/{eventId}")
+    EventDto getEventById(@PathVariable final long eventId) {
+        return eventService.getById(eventId);
     }
 
     @PostMapping("/add")

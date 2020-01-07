@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
             .antMatchers(HttpMethod.GET, "/search/event").hasRole("ADMIN")
             .antMatchers(HttpMethod.POST, "/search/event/add").hasRole("ADMIN")
-            .antMatchers(HttpMethod.GET, "/search/events").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "/search/event/events").hasRole("ADMIN")
             .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
             .antMatchers("/**").permitAll()
             .and().httpBasic()

@@ -9,6 +9,7 @@ export const useApi = (
     deps = []
 ) => {
     const [isLoading, setIsLoading] = useState(false);
+    const [hasErrorOccurred, setHasErrorOccurred] = useState(false);
     const [data, setData] = useState(null);
 
     const executeRequest = async () => {
@@ -17,8 +18,7 @@ export const useApi = (
             const response = await restService[method](url, body);
             setData(response);
         } catch (error) {
-            console.error(error);
-            throw error;
+            setHasErrorOccurred(true);
         } finally {
             setIsLoading(false);
         }
@@ -32,5 +32,5 @@ export const useApi = (
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [...deps]);
 
-    return [data, isLoading];
+    return [data, isLoading, hasErrorOccurred];
 };

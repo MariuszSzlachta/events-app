@@ -139,8 +139,8 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>assets/**</include>
-                    <include>images/**</include>
                     <include>templates/**</include>
+                    <include>i18n/**</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>

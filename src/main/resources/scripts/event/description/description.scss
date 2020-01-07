@@ -1,0 +1,18 @@
+.event-description {
+  color: $dark;
+  margin-top: 0.5rem;
+
+  &__label {
+    @include font-caption;
+    opacity: 0.6;
+
+    &:after {
+      content: ":"
+    }
+  }
+
+  &__text {
+    @include font-base;
+    margin: 0;
+  }
+}
