@@ -3,7 +3,7 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 
 import Button from "Common/components/button/Button";
-import "./footer.scss";
+import "Event/footer/footer.scss";
 
 const Footer = ({ footerAction }) => (
     <footer className="event-footer">

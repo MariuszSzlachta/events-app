@@ -1,0 +1,11 @@
+.events-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: $mobile-padding;
+
+  &__item {
+    margin-bottom: 0.75rem;
+    list-style: none;
+  }
+}

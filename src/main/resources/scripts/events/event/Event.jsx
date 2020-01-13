@@ -1,15 +1,15 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import _ from "lodash";
 import Content from "Event/content/Content";
 import { HTTP_METHODS } from "Common/Enums";
-import { EVENT_DETAILS_URL } from "Common/Urls";
+import { EVENT_DETAILS_URL_PREFIX } from "Common/Urls";
 import { useApi } from "Common/hooks";
 
-const Event = ({ id = 1 }) => {
-    const navigateToExternalUrl = url => window.location.replace(url);
+const Event = ({ id }) => {
+    const [event, isLoading, hasErrorOccurred] = useApi(`${EVENT_DETAILS_URL_PREFIX}/${id}`, {}, HTTP_METHODS.GET, []);
 
-    const [event, isLoading, hasErrorOccurred] = useApi(`${EVENT_DETAILS_URL}/${id}`, {}, HTTP_METHODS.GET, []);
+    const navigateToExternalUrl = url => window.location.replace(url);
 
     if (isLoading) {
         return <span>loading...</span>;
@@ -28,7 +28,7 @@ const Event = ({ id = 1 }) => {
 };
 
 Event.propTypes = {
-    id: PropTypes.number.isRequired
+    id: PropTypes.string.isRequired
 };
 
 export default Event;

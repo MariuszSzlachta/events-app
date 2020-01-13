@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/search/event")
+@RequestMapping("/api/events")
 public class EventController {
 
     private final EventService eventService;
@@ -21,7 +21,7 @@ public class EventController {
         this.eventService = eventService;
     }
 
-    @GetMapping("/events")
+    @GetMapping("")
     List<EventDto> findAll() {
         return eventService.findAll();
     }

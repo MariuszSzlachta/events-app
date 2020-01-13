@@ -1,0 +1,25 @@
+.event-thumbnail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  padding: 1rem;
+  border: none;
+  border-radius: $radius;
+  box-shadow: $shadow-3;
+
+  &__name {
+    width: calc(100% - 2rem);
+    @include absolute-center;
+    @include font-h2;
+    color: $white;
+    text-align: center;
+  }
+
+  .event-cover {
+    border-radius: $radius;
+    height: 180px;
+  }
+}

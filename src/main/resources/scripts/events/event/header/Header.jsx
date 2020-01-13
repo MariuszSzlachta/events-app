@@ -3,6 +3,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { BREAKPOINTS } from "Common/Enums";
 import Arrow from "Common/components/arrow/Arrow";
+
 import "./header.scss";
 
 const Header = ({ headingText, eventId }) => {

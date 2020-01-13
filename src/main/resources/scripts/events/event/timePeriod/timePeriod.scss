@@ -1,11 +1,16 @@
 .time-period {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   &__separator,
   &__icon,
-  &__label,
   &__date {
     margin-right: 8px;
   }
@@ -14,14 +19,18 @@
     color: $dark;
   }
 
-  &__icon {
+  &__icon path {
     fill: $dark;
   }
 
   &__label {
     @include font-caption;
     color: $dark;
-    opacity: 0.8;
+    opacity: 0.6;
+
+    &:after {
+      content: ":"
+    }
   }
 
   &__date {

@@ -12,5 +12,5 @@ module.exports.aliases = {
     App: path.resolve(__dirname, APP_DIR),
 
     // Modules
-    Event: path.resolve(__dirname, `${APP_DIR}/scripts/event`)
+    Event: path.resolve(__dirname, `${APP_DIR}/scripts/events/event`)
 };

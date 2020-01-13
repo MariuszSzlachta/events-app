@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { PATH } from "Common/Urls";
-
 import { MessageProvider } from "Common/Containers/messageProvider/MessageProvider";
 import { Router } from "Pages";
 import "./styles/index.scss";

@@ -6,4 +6,5 @@ export const PATH = {
 
 export const INTERNATIONALIZATION_MESSAGES_URL = "/i18n/messages";
 
-export const EVENT_DETAILS_URL = "/search/event";
+export const EVENTS_URL = "/api/events";
+export const EVENT_DETAILS_URL_PREFIX = "/api/events";

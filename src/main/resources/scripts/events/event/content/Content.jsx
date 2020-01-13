@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import TimePeriod from "Event/timePeriod/TimePeriod";
-import Header from "../header/Header";
-import Body from "../body/Body";
-import Footer from "../footer/Footer";
-import Description from "../description/Description";
+import Header from "Event/header/Header";
+import Body from "Event/body/Body";
+import Footer from "Event/footer/Footer";
+import Description from "Event/description/Description";
 
 const Content = ({
     content: {
