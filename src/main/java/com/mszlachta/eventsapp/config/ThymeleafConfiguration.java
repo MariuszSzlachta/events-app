@@ -1,6 +1,3 @@
-/*
- * Copyright (c) Asseco Business Solutions S.A. All rights reserved.
- */
 package com.mszlachta.eventsapp.config;
 
 import nz.net.ultraq.thymeleaf.LayoutDialect;
