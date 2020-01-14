@@ -31,8 +31,6 @@ const Button = ({
     );
 };
 
-export default Button;
-
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     classNames: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Array)]),
@@ -52,3 +50,5 @@ Button.defaultProps = {
     classNames: "",
     disabled: false
 };
+
+export default Button;

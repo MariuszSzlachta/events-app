@@ -17,7 +17,7 @@
 
 <body th:attr="data-lang=${@currentLocale.getLang()}">
     <div th:remove="tag">
-        <div id="app"></div>
+        <div id="app" class="app"></div>
     </div>
 
     <div layout:fragment="scripts" th:remove="tag">

@@ -21,8 +21,6 @@ const Arrow = ({ clickHandler, className }) => {
     );
 };
 
-export default Arrow;
-
 Arrow.propTypes = {
     clickHandler: PropTypes.func.isRequired,
     className: PropTypes.oneOfType([PropTypes.instanceOf(Array), PropTypes.string])
@@ -31,3 +29,5 @@ Arrow.propTypes = {
 Arrow.defaultProps = {
     className: ""
 };
+
+export default Arrow;

@@ -1,18 +1,21 @@
 import PropTypes from "prop-types";
 import React from "react";
 import _ from "lodash";
-import Content from "Event/content/Content";
+import Loader from "Common/components/loader/Loader";
 import { HTTP_METHODS } from "Common/Enums";
 import { EVENT_DETAILS_URL_PREFIX } from "Common/Urls";
 import { useApi } from "Common/hooks";
+import Content from "Event/content/Content";
 
 const Event = ({ id }) => {
-    const [event, isLoading, hasErrorOccurred] = useApi(`${EVENT_DETAILS_URL_PREFIX}/${id}`, {}, HTTP_METHODS.GET, []);
+    const [event, isLoading] = useApi(`${EVENT_DETAILS_URL_PREFIX}/${id}`, {}, HTTP_METHODS.GET, []);
 
     const navigateToExternalUrl = url => window.location.replace(url);
 
     if (isLoading) {
-        return <span>loading...</span>;
+        return (
+            <Loader />
+        );
     }
 
     if (!_.isNil(event)) {
@@ -24,7 +27,7 @@ const Event = ({ id }) => {
         );
     }
 
-    return hasErrorOccurred && <span>zaślepka</span>;
+    return <span>zaślepka brak eventu</span>;
 };
 
 Event.propTypes = {
