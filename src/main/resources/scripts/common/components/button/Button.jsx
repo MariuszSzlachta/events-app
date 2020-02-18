@@ -4,7 +4,7 @@ import { classNameMergeUtil } from "Common/utils";
 
 import "./button.scss";
 
-const Button = ({
+export const Button = ({
     children,
     variant,
     type = "button",
@@ -23,6 +23,7 @@ const Button = ({
             className={`button button--${variant} ${classes}`}
             onClick={onClick}
             onBlur={onBlur}
+            onFocus={onFocus}
             {...restProps}
             disabled={disabled}
         >
@@ -50,5 +51,3 @@ Button.defaultProps = {
     classNames: "",
     disabled: false
 };
-
-export default Button;

@@ -1,7 +1,12 @@
 package com.mszlachta.eventsapp.event.model;
 
-import com.mszlachta.eventsapp.commons.results.ResultSetUtils;
+import com.mszlachta.eventsapp.Cords;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
+import com.vladmihalcea.hibernate.type.json.JsonStringType;
 import lombok.*;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -46,6 +51,10 @@ public class Event {
     @NotNull
     private LocalDateTime dateTo;
 
+    @Type(type = "json")
+    @Column(columnDefinition = "json")
+    private Cords cords;
+
     public final EventDto toDto() {
         return EventDto.builder()
             .id(getId())
@@ -58,6 +67,7 @@ public class Event {
             .localNumber(getLocalNumber())
             .dateFrom(getDateFrom())
             .dateTo(getDateTo())
+            .cords(getCords())
             .build();
     }
 }

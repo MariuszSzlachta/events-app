@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import _ from "lodash";
-import Loader from "Common/components/loader/Loader";
+import { Loader } from "Common/components";
 import { HTTP_METHODS } from "Common/Enums";
 import { EVENT_DETAILS_URL_PREFIX } from "Common/Urls";
 import { useApi } from "Common/hooks";

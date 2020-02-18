@@ -7,7 +7,7 @@ import { classNameMergeUtil } from "Common/utils";
 
 import "./arrow.scss";
 
-const Arrow = ({ clickHandler, className }) => {
+export const Arrow = ({ clickHandler, className }) => {
     const classes = classNameMergeUtil(className);
 
     return (
@@ -29,5 +29,3 @@ Arrow.propTypes = {
 Arrow.defaultProps = {
     className: ""
 };
-
-export default Arrow;

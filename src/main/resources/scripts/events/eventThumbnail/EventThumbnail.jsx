@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
 import { PATH } from "Common/Urls";
-import Cover from "App/scripts/events/event/cover/Cover";
+import Cover from "Event/cover/Cover";
 
 import "./eventThumbnail.scss";
 

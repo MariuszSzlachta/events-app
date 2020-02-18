@@ -1,6 +1,7 @@
 package com.mszlachta.eventsapp.event.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.mszlachta.eventsapp.Cords;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,6 +35,8 @@ public class EventDto {
     @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private final LocalDateTime dateTo;
 
+    private final Cords cords;
+
     public final Event toEntity() {
         return Event.builder()
             .name(getName())
@@ -45,6 +48,7 @@ public class EventDto {
             .localNumber(getLocalNumber())
             .dateFrom(getDateFrom())
             .dateTo(getDateTo())
+            .cords(getCords())
             .build();
     }
 }

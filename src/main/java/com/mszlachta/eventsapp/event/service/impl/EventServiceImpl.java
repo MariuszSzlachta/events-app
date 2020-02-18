@@ -46,6 +46,7 @@ public class EventServiceImpl implements EventService {
             .localNumber(parameters.getLocalNumber())
             .dateFrom(parameters.getDateFrom())
             .dateTo(parameters.getDateTo())
+            .cords(parameters.getCords())
             .build();
 
         return eventRepository.save(eventDto.toEntity());

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 
-import Button from "Common/components/button/Button";
+import { Button } from "Common/components";
 import "Event/footer/footer.scss";
 
 const Footer = ({ footerAction }) => (

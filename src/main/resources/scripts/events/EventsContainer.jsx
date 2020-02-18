@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-import Loader from "Common/components/loader/Loader";
+import { Loader } from "Common/components";
 import { HTTP_METHODS } from "Common/Enums";
 import { useApi } from "Common/hooks";
 import { EVENTS_URL } from "Common/Urls";

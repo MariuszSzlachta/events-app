@@ -1,5 +1,6 @@
 package com.mszlachta.eventsapp.event.controller.request;
 
+import com.mszlachta.eventsapp.Cords;
 import com.mszlachta.eventsapp.event.model.EventParameters;
 import lombok.Getter;
 
@@ -31,4 +32,6 @@ public class EventRequest implements EventParameters {
 
     @NotNull
     private LocalDateTime dateTo;
+
+    private Cords cords;
 }

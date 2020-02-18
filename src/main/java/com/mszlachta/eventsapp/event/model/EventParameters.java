@@ -1,5 +1,7 @@
 package com.mszlachta.eventsapp.event.model;
 
+import com.mszlachta.eventsapp.Cords;
+
 import java.time.LocalDateTime;
 
 public interface EventParameters {
@@ -19,4 +21,6 @@ public interface EventParameters {
     LocalDateTime getDateFrom();
 
     LocalDateTime getDateTo();
+
+    Cords getCords();
 }

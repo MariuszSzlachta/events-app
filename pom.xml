@@ -81,6 +81,12 @@
             <artifactId>jasypt-spring-boot-starter</artifactId>
             <version>2.1.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.vladmihalcea</groupId>
+            <artifactId>hibernate-types-52</artifactId>
+            <version>2.9.3</version>
+        </dependency>
     </dependencies>
 
     <build>
