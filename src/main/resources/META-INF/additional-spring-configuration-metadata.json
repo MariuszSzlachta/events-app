@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "isDevelopmentModeOn",
+      "type": "java.lang.String",
+      "description": "Defines when development mode is enebled"
+    }
+  ]
+}

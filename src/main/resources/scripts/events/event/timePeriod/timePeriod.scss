@@ -1,0 +1,40 @@
+.time-period {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__separator,
+  &__icon,
+  &__date {
+    margin-right: 8px;
+  }
+
+  &__separator {
+    color: $dark;
+  }
+
+  &__icon path {
+    fill: $dark;
+  }
+
+  &__label {
+    @include font-caption;
+    color: $dark;
+    opacity: 0.6;
+
+    &:after {
+      content: ":"
+    }
+  }
+
+  &__date {
+    @include font-caption;
+    color: $dark;
+  }
+}

@@ -1,13 +1,16 @@
 package com.mszlachta.eventsapp.event.service;
 
 import com.mszlachta.eventsapp.event.model.Event;
+import com.mszlachta.eventsapp.event.model.EventDto;
+import com.mszlachta.eventsapp.event.model.EventParameters;
 
 import java.util.List;
 
 public interface EventService {
-    Event getByName(final String eventName);
 
-    List<Event> findAll();
+    EventDto getById(final long eventId);
 
-    Event createEvent(Event newEvent);
+    List<EventDto> findAll();
+
+    Event createEvent(EventParameters parameters);
 }

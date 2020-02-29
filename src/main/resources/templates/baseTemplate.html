@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Application to spot and create events"/>
+    <meta name="copyright" content="Mariusz Szlachta"/>
+    <meta name="author" content="Mariusz Szlachta"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="_csrf_header" data-th-content="${_csrf.headerName}" th:if="${_csrf}"/>
+    <meta name="_csrf_token" data-th-content="${_csrf.token}" th:if="${_csrf}"/>
+    <title>Events-app</title>
+</head>
+
+<body th:attr="data-lang=${@currentLocale.getLang()}">
+    <div th:remove="tag">
+        <div id="app"></div>
+    </div>
+
+    <div layout:fragment="scripts" th:remove="tag">
+        <script th:src="@{'//localhost:3000/polyfills.bundle.js'}"></script>
+        <script th:src="@{'//localhost:3000/app.bundle.js'}"></script>
+    </div>
+</body>
+</html>
