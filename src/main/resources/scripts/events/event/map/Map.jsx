@@ -3,24 +3,32 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { MapMarker } from "Common/components";
 
-const Map = ({ cords, zoom = 5 }) => (
+import "./map.scss";
+
+const Map = ({ cords, zoom = 5, textValue }) => (
     <div className="event-map-container">
         <GoogleMapReact
             bootstrapURLKeys={{ key: "AIzaSyBxh2X1fRifIDq5BfrCIZwBGdXgnxDAexs" }}
             defaultCenter={cords}
             defaultZoom={zoom}
+            className="event-map"
         >
-            <MapMarker />
+            <MapMarker
+                lat={cords.lat}
+                lng={cords.lng}
+                text={textValue}
+            />
         </GoogleMapReact>
     </div>
 );
 
 Map.propTypes = {
     cords: PropTypes.shape({
-        lat: PropTypes.string.isRequired,
-        lng: PropTypes.string.isRequired
+        lat: PropTypes.number.isRequired,
+        lng: PropTypes.number.isRequired
     }).isRequired,
-    zoom: PropTypes.number
+    zoom: PropTypes.number,
+    textValue: PropTypes.string.isRequired
 };
 
 Map.defaultProps = {

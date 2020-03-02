@@ -6,6 +6,7 @@ import Header from "Event/header/Header";
 import Body from "Event/body/Body";
 import Footer from "Event/footer/Footer";
 import Description from "Event/description/Description";
+import Map from "Event/map/Map";
 
 const Content = ({
     content: {
@@ -14,7 +15,8 @@ const Content = ({
         description,
         externalUrl,
         dateFrom,
-        dateTo
+        dateTo,
+        cords
     },
     navigateToExternalUrl
 }) => (
@@ -23,6 +25,7 @@ const Content = ({
         <Body>
             <TimePeriod dateFrom={dateFrom} dateTo={dateTo} />
             <Description text={description} />
+            <Map cords={cords} zoom={5} textValue={name} />
         </Body>
         <Footer footerAction={() => navigateToExternalUrl(externalUrl)} />
     </article>
@@ -35,7 +38,11 @@ Content.propTypes = {
         description: PropTypes.string.isRequired,
         externalUrl: PropTypes.string,
         dateFrom: PropTypes.string.isRequired,
-        dateTo: PropTypes.string.isRequired
+        dateTo: PropTypes.string.isRequired,
+        cords: PropTypes.shape({
+            lat: PropTypes.number.isRequired,
+            lng: PropTypes.number.isRequired
+        }).isRequired
     }).isRequired,
     navigateToExternalUrl: PropTypes.func.isRequired
 };

@@ -1,18 +1,30 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const MapMarker = ({ onClick }) => (
-    <button type="button" className="map-marker" onClick={onClick}>
-        <FontAwesomeIcon icon={faMapMarkerAlt} />
-    </button>
-);
+import "./mapMarker.scss";
 
-MapMarker.propTypes = {
-    onClick: PropTypes.instanceOf(Function)
+export const MapMarker = ({ text }) => {
+    const [isContentVisible, setIsContentVisible] = useState(false);
+    const toggleContentVisibility = () => setIsContentVisible(isVisible => !isVisible);
+
+    return (
+        <button
+            type="button"
+            className="map-marker"
+            onTouchStart={toggleContentVisibility}
+            onClick={toggleContentVisibility}
+        >
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="map-marker__icon" />
+
+            {isContentVisible && (
+                <div className="map-marker__text">{text}</div>
+            )}
+        </button>
+    );
 };
 
-MapMarker.defaultProps = {
-    onClick: () => {}
+MapMarker.propTypes = {
+    text: PropTypes.string.isRequired
 };

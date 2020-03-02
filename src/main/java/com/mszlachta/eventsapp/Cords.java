@@ -20,7 +20,7 @@ import javax.persistence.MappedSuperclass;
 @ToString
 public class Cords {
 
-    private final String lat;
+    private final Double lat;
 
-    private final String lng;
+    private final Double lng;
 }
