@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -13,7 +14,6 @@ export const MapMarker = ({ text }) => {
         <button
             type="button"
             className="map-marker"
-            onTouchStart={toggleContentVisibility}
             onClick={toggleContentVisibility}
         >
             <FontAwesomeIcon icon={faMapMarkerAlt} className="map-marker__icon" />
