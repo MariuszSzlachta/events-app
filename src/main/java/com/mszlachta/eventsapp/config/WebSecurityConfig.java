@@ -39,8 +39,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         http.authorizeRequests()
-            .antMatchers(HttpMethod.GET, "/search/event").hasRole("ADMIN")
-            .antMatchers(HttpMethod.POST, "/search/event/add").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "/api/event").hasRole("ADMIN")
+            .antMatchers(HttpMethod.POST, "/api/event/add").hasRole("ADMIN")
             .antMatchers(HttpMethod.GET, "/search/event/events").hasRole("ADMIN")
             .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
             .antMatchers("/**").permitAll()

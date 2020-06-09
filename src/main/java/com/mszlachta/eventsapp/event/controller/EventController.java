@@ -1,8 +1,7 @@
 package com.mszlachta.eventsapp.event.controller;
 
-import com.mszlachta.eventsapp.event.model.EventDto;
 import com.mszlachta.eventsapp.event.controller.request.EventRequest;
-import com.mszlachta.eventsapp.event.model.EventParameters;
+import com.mszlachta.eventsapp.event.model.EventDto;
 import com.mszlachta.eventsapp.event.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +32,7 @@ public class EventController {
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
-        void createEvent(@RequestBody EventRequest request) {
-            eventService.createEvent(request);
+    void createEvent(@RequestBody EventRequest request) {
+        eventService.createEvent(request);
     }
 }

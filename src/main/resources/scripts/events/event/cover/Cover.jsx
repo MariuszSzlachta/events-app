@@ -6,11 +6,10 @@ import { BREAKPOINTS } from "Common/Enums";
 import "./cover.scss";
 
 const Cover = ({ eventId }) => {
-    const isDisplayedOnPhone = useMediaQuery({ query: `(min-width: ${BREAKPOINTS.PHONE.MIN}px)` });
-
+    const isDisplayedOnPhone = useMediaQuery({ query: `(max-width: ${BREAKPOINTS.PHONE.MAX}px)` });
     const source = isDisplayedOnPhone ?
         `/assets/images/event/${eventId}/event_bg-small.jpg` :
-        `/assets/images/event/${eventId}/event_bg-full.jpg`;
+        `/assets/images/event/${eventId}/event_bg-full.jpeg`;
 
     return (
         <img className="event-cover" src={source} alt="cover of event" />

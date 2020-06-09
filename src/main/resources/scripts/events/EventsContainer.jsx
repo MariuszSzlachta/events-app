@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty, isNil} from "lodash";
 import { Loader } from "Common/components";
 import { HTTP_METHODS } from "Common/Enums";
 import { useApi } from "Common/hooks";
@@ -15,7 +15,7 @@ const EventsContainer = () => {
         );
     }
 
-    if (!_.isNil(events)) {
+    if (events) {
         return (
             <EventsList events={events} />
         );

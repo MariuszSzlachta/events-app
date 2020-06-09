@@ -6,9 +6,9 @@ const _service = Symbol();
 const _handleError = Symbol();
 
 class RestService {
-    constructor() {
+    constructor(restClient) {
         this[_headers] = getCsrfHeaders();
-        this[_service] = axios.create();
+        this[_service] = restClient;
         this[_service].defaults.headers = getCsrfHeaders();
     }
 
@@ -29,4 +29,4 @@ class RestService {
     }
 }
 
-export const restService = new RestService();
+export const restService = new RestService(axios.create());

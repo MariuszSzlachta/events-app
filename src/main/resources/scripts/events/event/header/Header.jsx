@@ -7,11 +7,11 @@ import { Arrow } from "Common/components";
 import "./header.scss";
 
 const Header = ({ headingText, eventId }) => {
-    const isDisplayedOnPhone = useMediaQuery({ query: `(min-width: ${BREAKPOINTS.PHONE.MIN}px)` });
+    const isDisplayedOnPhone = useMediaQuery({ query: `(max-width: ${BREAKPOINTS.PHONE.MAX}px)` });
 
     const background = isDisplayedOnPhone ?
         `/assets/images/event/${eventId}/event_bg-small.jpg` :
-        `/assets/images/event/${eventId}/event_bg-full.jpg`;
+        `/assets/images/event/${eventId}/event_bg-full.jpeg`;
 
     return (
         <header className="event-header" style={{ backgroundImage: `url(${background})` }}>

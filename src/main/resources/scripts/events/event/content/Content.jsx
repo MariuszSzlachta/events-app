@@ -25,7 +25,17 @@ const Content = ({
         <Body>
             <TimePeriod dateFrom={dateFrom} dateTo={dateTo} />
             <Description text={description} />
-            <Map cords={cords} zoom={5} textValue={name} />
+            {cords && (
+                <Map
+                    isMarkerShown
+                    cords={cords}
+                    zoom={5}
+                    textValue={name}
+                    containerElement={<div style={{ height: "400px" }} />}
+                    mapElement={<div style={{ height: "100%" }} />}
+                    loadingElement={<div style={{ height: "100%" }} />}
+                />
+            )}
         </Body>
         <Footer footerAction={() => navigateToExternalUrl(externalUrl)} />
     </article>
@@ -42,7 +52,7 @@ Content.propTypes = {
         cords: PropTypes.shape({
             lat: PropTypes.number.isRequired,
             lng: PropTypes.number.isRequired
-        }).isRequired
+        })
     }).isRequired,
     navigateToExternalUrl: PropTypes.func.isRequired
 };
