@@ -22,7 +22,8 @@ module.exports = () => ({
         historyApiFallback: true,
         open: false,
         hot: true,
-        port: 3000
+        port: 3000,
+        watchContentBase: true
     },
     module: {
         rules: [

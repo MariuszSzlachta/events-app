@@ -1,7 +1,7 @@
-import _ from "lodash";
+import { isNil } from "lodash";
 
 export const classNameMergeUtil = classes => {
-    if (_.isNil(classes)) {
+    if (isNil(classes)) {
         return "";
     }
 

@@ -11,6 +11,7 @@ const Cover = ({ eventId }) => {
         `/assets/images/event/${eventId}/event_bg-small.jpg` :
         `/assets/images/event/${eventId}/event_bg-full.jpeg`;
 
+
     return (
         <img className="event-cover" src={source} alt="cover of event" />
     );
