@@ -7,14 +7,14 @@ import { classNameMergeUtil } from "Common/utils";
 
 import "./arrow.scss";
 
-export const Arrow = ({ clickHandler, className }) => {
+export const Arrow = ({ handleClick, className }) => {
     const classes = classNameMergeUtil(className);
 
     return (
         <button
             type="button"
             className={`arrow ${classes}`}
-            onClick={clickHandler}
+            onClick={handleClick}
         >
             <FontAwesomeIcon icon={faAngleLeft} />
         </button>
@@ -22,7 +22,7 @@ export const Arrow = ({ clickHandler, className }) => {
 };
 
 Arrow.propTypes = {
-    clickHandler: PropTypes.func.isRequired,
+    handleClick: PropTypes.func.isRequired,
     className: PropTypes.oneOfType([PropTypes.instanceOf(Array), PropTypes.string])
 };
 

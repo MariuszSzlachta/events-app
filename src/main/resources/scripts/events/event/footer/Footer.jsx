@@ -5,13 +5,13 @@ import { FormattedMessage } from "react-intl";
 import { Button } from "Common/components";
 import "Event/footer/footer.scss";
 
-const Footer = ({ footerAction }) => (
+const Footer = ({ handleClick }) => (
     <footer className="event-footer">
         <Button
             type="button"
             variant="primary"
             classNames="event__button"
-            onClick={footerAction}
+            onClick={handleClick}
         >
             <FormattedMessage id="event.join" />
         </Button>
@@ -21,5 +21,5 @@ const Footer = ({ footerAction }) => (
 export default Footer;
 
 Footer.propTypes = {
-    footerAction: PropTypes.func.isRequired
+    handleClick: PropTypes.func.isRequired
 };

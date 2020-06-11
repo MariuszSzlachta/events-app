@@ -15,7 +15,7 @@ const Header = ({ headingText, eventId }) => {
 
     return (
         <header className="event-header" style={{ backgroundImage: `url(${background})` }}>
-            <Arrow className="event-header__arrow" clickHandler={() => window.history.back()} />
+            <Arrow className="event-header__arrow" handleClick={() => window.history.back()} />
             <h2 className="event-header__heading">{headingText}</h2>
         </header>
     );

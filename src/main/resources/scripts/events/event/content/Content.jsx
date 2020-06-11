@@ -28,7 +28,7 @@ const Content = ({
             {cords && (
                 <Map
                     isMarkerShown
-                    cords={cords}
+                    cords={{ lat: 52.121333, lng: 21.159800 }}
                     zoom={5}
                     textValue={name}
                     containerElement={<div style={{ height: "400px" }} />}
@@ -37,7 +37,7 @@ const Content = ({
                 />
             )}
         </Body>
-        <Footer footerAction={() => navigateToExternalUrl(externalUrl)} />
+        <Footer handleClick={() => navigateToExternalUrl(externalUrl)} />
     </article>
 );
 
