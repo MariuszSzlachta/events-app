@@ -11,7 +11,7 @@ import "./map.scss";
 
 const Map = compose(
     withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBn5a2fCtoqHFprL4iYLOu5iCXmGOCAQok&v=3.exp&libraries=geometry,drawing,places",
+        googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.MAPS_KEY}&v=3.exp&libraries=geometry,drawing,places`,
         loadingElement: <div style={{ height: "100%" }} />,
         containerElement: <div style={{ height: "400px" }} />,
         mapElement: <div style={{ height: "100%" }} />
@@ -21,7 +21,7 @@ const Map = compose(
 )(({ cords, zoom, isMarkerShown }) => (
     <div className="event-map-container">
         <GoogleMap
-            bootstrapURLKeys={{ key: "AIzaSyDRhXhgEGJzKLoq5YcN5wkUr9P-k6gbaSg" }}
+            bootstrapURLKeys={{ key: process.env.MAPS_KEY }}
             defaultCenter={cords}
             defaultZoom={zoom}
             className="event-map"

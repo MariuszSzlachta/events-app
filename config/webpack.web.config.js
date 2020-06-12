@@ -77,6 +77,9 @@ module.exports = () => ({
             debug: true
         }),
         new webpack.ProgressPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(),
+        new webpack.DefinePlugin({
+            "process.env.MAPS_KEY": JSON.stringify(process.env.MAPS_KEY)
+        })
     ]
 });
