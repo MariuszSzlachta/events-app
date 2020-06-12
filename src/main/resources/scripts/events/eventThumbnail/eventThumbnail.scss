@@ -11,11 +11,15 @@
   box-shadow: $shadow-3;
 
   &__name {
-    width: calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
+    width: 80%;
+    border-radius: $radius;
+    padding: 0.5rem 1rem;
     @include absolute-center;
     @include font-h2;
     color: $white;
     text-align: center;
+    background: rgba(#000, 0.7);
   }
 
   .event-cover {
