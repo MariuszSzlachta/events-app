@@ -28,3 +28,13 @@
     border-top-left-radius: $radius;
   }
 }
+
+@media screen and (min-width: $breakpoint-md) {
+  .event-header {
+    min-height: 400px;
+
+    &__heading {
+      font-size: 300%;
+    }
+  }
+}

@@ -31,3 +31,7 @@ $shadow-4: 0 10px 20px rgba(0,0,0, 0.7);
 $gradient-green: linear-gradient(to right, $blue, $accent-green);
 
 $gradient-primary: linear-gradient(-45deg, $accent-orange, $accent-pink, $dark-blue, $blue);
+
+//breakpoints
+
+$breakpoint-md: 768px;

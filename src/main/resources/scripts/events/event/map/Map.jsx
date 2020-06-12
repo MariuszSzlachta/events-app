@@ -12,14 +12,14 @@ import "./map.scss";
 const Map = compose(
     withProps({
         googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.MAPS_KEY}&v=3.exp&libraries=geometry,drawing,places`,
-        loadingElement: <div style={{ height: "100%" }} />,
-        containerElement: <div style={{ height: "400px" }} />,
-        mapElement: <div style={{ height: "100%" }} />
+        loadingElement: <div className="event-map--loading-element" />,
+        containerElement: <div className="event-map--container" />,
+        mapElement: <div className="event-map--element" />
     }),
     withScriptjs,
     withGoogleMap
 )(({ cords, zoom, isMarkerShown }) => (
-    <div className="event-map-container">
+    <div>
         <GoogleMap
             bootstrapURLKeys={{ key: process.env.MAPS_KEY }}
             defaultCenter={cords}
@@ -52,7 +52,7 @@ Map.propTypes = {
 };
 
 Map.defaultProps = {
-    zoom: 5
+    zoom: 10
 };
 
 export default Map;

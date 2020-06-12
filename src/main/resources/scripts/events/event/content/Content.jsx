@@ -29,7 +29,7 @@ const Content = ({
                 <Map
                     isMarkerShown
                     cords={{ lat: 52.121333, lng: 21.159800 }}
-                    zoom={5}
+                    zoom={10}
                     textValue={name}
                     containerElement={<div style={{ height: "400px" }} />}
                     mapElement={<div style={{ height: "100%" }} />}
