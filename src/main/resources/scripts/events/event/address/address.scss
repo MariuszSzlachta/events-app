@@ -1,0 +1,26 @@
+.event-address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  @include font-caption;
+
+  &__part {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__label {
+    margin-right: 0.25rem;
+    color: $dark;
+    opacity: 0.6;
+
+    &:after {
+      content: ":"
+    }
+  }
+
+  &__text {
+    color: $dark;
+  }
+}

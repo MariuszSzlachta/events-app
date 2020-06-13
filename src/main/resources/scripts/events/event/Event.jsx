@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import _ from "lodash";
+import { isNil } from "lodash";
 import { Loader } from "Common/components";
 import { HTTP_METHODS } from "Common/Enums";
 import { EVENT_DETAILS_URL_PREFIX } from "Common/Urls";
@@ -18,7 +18,7 @@ const Event = ({ id }) => {
         );
     }
 
-    if (!_.isNil(event)) {
+    if (!isNil(event)) {
         return (
             <Content
                 content={event}

@@ -1,3 +1,4 @@
+import Address from "Event/address/Address";
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -16,7 +17,8 @@ const Content = ({
         externalUrl,
         dateFrom,
         dateTo,
-        cords
+        cords,
+        ...addressProps
     },
     navigateToExternalUrl
 }) => (
@@ -24,6 +26,7 @@ const Content = ({
         <Header headingText={name} eventId={id} />
         <Body>
             <TimePeriod dateFrom={dateFrom} dateTo={dateTo} />
+            <Address address={addressProps} />
             <Description text={description} />
             {cords && (
                 <Map
